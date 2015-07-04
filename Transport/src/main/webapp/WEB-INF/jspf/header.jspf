@@ -1,4 +1,5 @@
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,14 +35,20 @@
                 </div>
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="#"><fmt:message key='main'/></a></li>
-                        <li><a href="#"><fmt:message key='offlineHistory'/></a></li>
+                        <li><a href="index.htm"><fmt:message key='main'/></a></li>
+                        <li><a href="offlinehistory.htm"><fmt:message key='offlineHistory'/></a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><fmt:message key='clients'/><span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="#"><fmt:message key='pharmacy'/></a></li>
                                 <li><a href="#"><fmt:message key='supplier'/></a></li>
                             </ul>
+                        </li>
+                        <li>
+                        <c:if test="${pageContext.request.userPrincipal.name != null}">
+                            <h2>Welcome : ${pageContext.request.userPrincipal.name} 
+                                | <a href="<c:url value="/j_spring_security_logout" />" > Logout</a></h2>  
+                        </c:if>
                         </li>
                     </ul>
                 </div><!--/.nav-collapse -->
