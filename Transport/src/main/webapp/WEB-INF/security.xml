@@ -9,12 +9,25 @@
  
 	<http auto-config="true">
 		<intercept-url pattern="/offlinehistory**" access="hasRole('ROLE_USER')" />
+                <!--<intercept-url pattern="/login.htm" filters="none"/>-->
+                <form-login 
+		    login-page="/login.htm" 
+		    default-target-url="/index.htm" 
+                    login-processing-url="/j_spring_security_check.htm"
+                    
+			authentication-failure-url="/login.htm?error" 
+			username-parameter="j_username"
+			password-parameter="j_password" />
+		<logout logout-success-url="/login.htm?logout"
+                        logout-url="/j_spring_security_logout.htm"                />
+		<!-- enable csrf protection -->
+		<csrf/>
 	</http>
  
 	<authentication-manager>
 	  <authentication-provider>
 	    <user-service>
-		<user name="test" password="123456" authorities="ROLE_USER" />
+		<user name="test" password="test" authorities="ROLE_USER" />
 	    </user-service>
 	  </authentication-provider>
 	</authentication-manager>

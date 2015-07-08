@@ -39,7 +39,7 @@
     <jsp-config>
         <jsp-property-group>
             <description>Header and Footer</description>
-            <url-pattern>/WEB-INF/jsp/*</url-pattern>
+            <url-pattern>/WEB-INF/jsp/main/*</url-pattern>
             <scripting-invalid>false</scripting-invalid>
             <include-prelude>/WEB-INF/jspf/header.jspf</include-prelude>
             <include-coda>/WEB-INF/jspf/footer.jspf</include-coda>
