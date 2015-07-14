@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="com.itapteka_Transport_war_1.0-SNAPSHOTPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>com.itapteka.transport.dbcontroller.Stats</class>
+    <class>com.itapteka.transport.dbcontroller.CleanerException</class>
+    <class>com.itapteka.transport.dbcontroller.HttpInfo</class>
+    <class>com.itapteka.transport.dbcontroller.ClickPriceFormatInfo</class>
+    <class>com.itapteka.transport.dbcontroller.FormatInfo</class>
+    <class>com.itapteka.transport.dbcontroller.OldFile</class>
+    <class>com.itapteka.transport.dbcontroller.ClientSendSettings</class>
+    <class>com.itapteka.transport.dbcontroller.RouteCopy</class>
+    <class>com.itapteka.transport.dbcontroller.SupplierSettings</class>
+    <class>com.itapteka.transport.dbcontroller.TransportClientInfo</class>
+    <class>com.itapteka.transport.dbcontroller.ClientUpdates</class>
+    <class>com.itapteka.transport.dbcontroller.ScheduleDay</class>
+    <class>com.itapteka.transport.dbcontroller.MzPartnerInfo</class>
+    <class>com.itapteka.transport.dbcontroller.Region</class>
+    <class>com.itapteka.transport.dbcontroller.PharmacyClickPriceInfo</class>
+    <class>com.itapteka.transport.dbcontroller.Client</class>
+    <class>com.itapteka.transport.dbcontroller.EnaklMetadata</class>
+    <class>com.itapteka.transport.dbcontroller.TransportInfo</class>
+    <class>com.itapteka.transport.dbcontroller.Route</class>
+    <class>com.itapteka.transport.dbcontroller.ClientNotes</class>
+    <class>com.itapteka.transport.dbcontroller.UserAccount</class>
+    <class>com.itapteka.transport.dbcontroller.Log</class>
+    <class>com.itapteka.transport.dbcontroller.ClickPriceModule</class>
+    <class>com.itapteka.transport.dbcontroller.SupplierClickPriceInfo</class>
+    <class>com.itapteka.transport.dbcontroller.ExportSysTrafficMapping</class>
+    <class>com.itapteka.transport.dbcontroller.ClientSettings</class>
+    <class>com.itapteka.transport.dbcontroller.PharmacyMaInfo</class>
+    <class>com.itapteka.transport.dbcontroller.ClickPriceInfo</class>
+    <class>com.itapteka.transport.dbcontroller.Document</class>
+    <class>com.itapteka.transport.dbcontroller.ClientLog</class>
+    <class>com.itapteka.transport.dbcontroller.FtpInfo</class>
+    <class>com.itapteka.transport.dbcontroller.ServerClientConfig</class>
+    <class>com.itapteka.transport.dbcontroller.ClientTraffic</class>
+    <class>com.itapteka.transport.dbcontroller.Schedule</class>
+    <class>com.itapteka.transport.dbcontroller.OfflineHistory</class>
+    <class>com.itapteka.transport.dbcontroller.TransportFormatInfo</class>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://prog-test:5432/transport-test"/>
+      <property name="javax.persistence.jdbc.user" value="postgres"/>
+      <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+      <property name="javax.persistence.jdbc.password" value=""/>
+    </properties>
+  </persistence-unit>
+</persistence>
