@@ -9,7 +9,8 @@
  
 	<http auto-config="true">
 		<intercept-url pattern="/offlinehistory**" access="hasRole('ROLE_USER')" />
-                <!--<intercept-url pattern="/login.htm" filters="none"/>-->
+                <intercept-url pattern="/index**" access="hasRole('ROLE_USER')" />
+                <!--<security:http pattern="/login.htm" security="none"/>-->
                 <form-login 
 		    login-page="/login.htm" 
 		    default-target-url="/index.htm" 

@@ -16,6 +16,7 @@
     <!--<bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>-->
     <context:component-scan base-package="com.itapteka.transport.jspcontroller"/>
     <mvc:annotation-driven />
+    <mvc:resources mapping="/js/**" location="/js/" />
     <!--
     Most controllers will use the ControllerClassNameHandlerMapping above, but
     for the index controller we are using ParameterizableViewController, so we must
